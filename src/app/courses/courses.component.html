@@ -1,0 +1,20 @@
+<div class="container" fxLayout="column" fxLayoutGap="10px">
+  <div fxFlex>
+    <div>
+      <h2>Courses & Certifications</h2>
+      <hr>
+    </div>
+  </div>
+
+  <div fxFlex *ngIf="certificates">
+    <mat-grid-list cols="2" rowHeight="400px">
+      <mat-grid-tile *ngFor="let certificate of certificates">
+        <img height="400px" src="{{certificate.image}}" alt="{{certificate.name}}">
+        <mat-grid-tile-footer>
+          <h1> {{certificate.name}}. <br>
+          {{certificate.description}}</h1>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
